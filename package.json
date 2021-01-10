@@ -9,7 +9,7 @@
         "clean": "rm -rf dist",
         "build": "tsc",
         "deploy": "npm publish",
-        "prepublishOnly": "npm run clean && npm run build && cp -r ./dist/* /lib",
+        "prepublishOnly": "npm run clean && npm run build && cp -R dist lib",
         "postpublish": "rm -rf lib"
     },
     "files": ["dist/", "readme.md"],
