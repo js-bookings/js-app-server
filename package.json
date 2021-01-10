@@ -12,14 +12,8 @@
         "prepublishOnly": "npm run clean && npm run build && cp -R dist lib",
         "postpublish": "rm -rf lib"
     },
-    "files": [
-        "dist/",
-        "readme.md"
-    ],
-    "keywords": [
-        "typescript",
-        "boilerplate"
-    ],
+    "files": ["lib/", "readme.md"],
+    "keywords": ["typescript", "boilerplate"],
     "author": "Nicolas Minig",
     "license": "ISC",
     "repository": {
