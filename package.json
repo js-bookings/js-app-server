@@ -1,6 +1,6 @@
 {
     "name": "@js-bookings/js-app-server",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "TypeScript boilerplate for NPM or Github Packages",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -12,8 +12,14 @@
         "prepublishOnly": "npm run clean && npm run build && cp -R dist lib",
         "postpublish": "rm -rf lib"
     },
-    "files": ["dist/", "readme.md"],
-    "keywords": ["typescript", "boilerplate"],
+    "files": [
+        "dist/",
+        "readme.md"
+    ],
+    "keywords": [
+        "typescript",
+        "boilerplate"
+    ],
     "author": "Nicolas Minig",
     "license": "ISC",
     "repository": {
