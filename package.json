@@ -9,17 +9,13 @@
         "build": "rm -rf dist; tsc",
         "deploy": "npm publish"
     },
-    "keywords": [
-        "typescript",
-        "github packages",
-        "npm packages",
-        "boilerplate"
-    ],
+    "files": ["dist/", "readme.md"],
+    "keywords": ["typescript", "boilerplate"],
     "author": "Nicolas Minig",
     "license": "ISC",
     "repository": {
         "type": "git",
-        "url": "https://github.com/js-bookings/js-test.git"
+        "url": "https://github.com/js-bookings/js-app-server.git"
     },
     "devDependencies": {
         "@types/chai": "^4.2.12",
