@@ -6,17 +6,14 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "test": "mocha --timeout 60000 --exit -r ts-node/register test/**/*.spec.ts",
-        "build": "rm -rf dist; tsc",
-        "deploy": "npm publish"
+        "clean": "rm -rf dist",
+        "build": "tsc",
+        "deploy": "npm publish",
+        "prepublishOnly": "npm run clean && npm run build && cp -r ./dist/* /lib",
+        "postpublish": "rm -rf lib"
     },
-    "files": [
-        "dist/",
-        "readme.md"
-    ],
-    "keywords": [
-        "typescript",
-        "boilerplate"
-    ],
+    "files": ["dist/", "readme.md"],
+    "keywords": ["typescript", "boilerplate"],
     "author": "Nicolas Minig",
     "license": "ISC",
     "repository": {
