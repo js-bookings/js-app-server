@@ -8,9 +8,9 @@
         "sourceMap": true,
         "pretty": true,
         "target": "ES2017",
-        "declaration": true,
-        "types": ["mocha", "node", "chai"]
+        "declaration": true
     },
     "compileOnSave": true,
-    "include": ["src/**/*.ts"]
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules", "dist", "docs", "test/**"]
 }

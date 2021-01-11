@@ -19,7 +19,7 @@ export class EntityTS extends Entity {
 }
 
 export interface Application {
-    applicationContext: ApplicationContext
+    applicationContext: IApplicationContext
     start(): Promise<unknown>
     stop(): void
 }
@@ -34,11 +34,17 @@ export interface ApplicationController<T extends Entity> {
 export type Bag<T> = Map<string, T>
 export type ControllerMap = Map<string, ApplicationController<Entity>>
 
-export interface ApplicationContext {
-    port?: number
-    useCaseFactory: UseCaseFactory
-    controllers: Map<string, ApplicationController<Entity>>
-    registerController(
+export interface IComponent {
+
+}
+export interface IApplicationContext {
+
+    registerComponent(name: string, component: IComponent): void
+    getComponent(name: string): IComponent
+    isComponentExist(name: string): IComponent
+    getApplicationName(): string
+
+    /*registerController(
         name: string,
         controller: ApplicationController<Entity>,
     ): void
@@ -48,7 +54,7 @@ export interface ApplicationContext {
     registerUseCase(name: string, useCase: UseCase<Entity>): void
     getUseCase(name: string): UseCase<Entity>
     registerService(name: string, Service: Service): void
-    getService(name: string): Service
+    getService(name: string): Service*/
 }
 
 export type ValidationErrorDetails = {
